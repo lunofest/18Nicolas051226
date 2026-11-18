@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta property="og:title" content="Nicolás - Mis 18 Años" />
+    <meta property="og:description"
+        content="¡La cuenta regresiva ha comenzado! Descubre los detalles y confirma tu asistencia." />
+
+    <meta property="og:image" content="https://lunofest.github.io/18Nicolas051226/assets/imagenes/miniatura.png" />
+    <meta property="og:url" content="https://lunofest.github.io/18Nicolas051226/" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image:type" content="image/png" />
+
+
+
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Cache-Control" content="s-maxage=3600">
+    <meta http-equiv="Cache-Control" content="max-age=3600">
+
+    <script src="js/service-worker.js"></script>
+
+    <title>Mis 18 Nicolás</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
+    <link rel="stylesheet" href="estilos/normalize.css?v21">
+    <link rel="stylesheet" href="estilos/styles.css?v22">
+    <link rel="stylesheet" href="estilos/mediaQueries.css?v21">
+    <link rel="stylesheet" href="estilos/guest.css?v25">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+</head>
+
+<body>
+
+
+    <header class="header">
+
+        <nav class="nav container" id="nav">
+
+            <div class="nav__icons">
+                <a href="#nav">
+                    <svg class="nav__open" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40"
+                        height="40">
+                        <path d="M3 6h18M3 12h18M3 18h18" />
+                    </svg>
+                </a>
+                <a href="#">
+                    <svg class="nav__close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="40"
+                        height="40">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </a>
+            </div>
+
+
+
+
+            <ul class="nav__items">
+
+                <li class="nav__links">
+                    <a class="nav__link" href="#temporizador">¿Cuánto falta?</a>
+                </li>
+                <li class="nav__links">
+                    <a class="nav__link" href="#donde">Ubicación</a>
+                </li>
+                <li class="nav__links">
+                    <a class="nav__link" href="#fotos">Fotos</a>
+                </li>
+                <li class="nav__links">
+                    <a class="nav__link" href="#playlist">Playlist</a>
+                </li>
+                <li class="nav__links">
+                    <a class="nav__link" href="#album">Álbum</a>
+                </li>
+                <li class="nav__links">
+                    <a class="nav__link" href="#correo">Confirmación</a>
+                </li>
+
+            </ul>
+
+
+        </nav>
+
+        <section class="music">
+
+            <h3 class="music__title">Dale Play!
+            </h3>
+
+            <div class="music__container">
+                <img class="music__tocadisco" src="assets/imagenes/tocaDISCO.webp" alt="">
+                <audio src="assets/musica.mp3"></audio>
+                <img class="music__img" src="assets/imagenes/testigo1.webp" alt="">
+                <div class="controles">
+                    <div class="controles__button">
+                        <img class="controles__img" id="rewind" src="assets/vectores/rewind.svg" alt="">
+                    </div>
+                    <div class="controles__button" id="playPauseContainer">
+                        <img class="controles__img" id="play" src="assets/vectores/play.svg" alt="">
+                        <img class="controles__img" id="pause" src="assets/vectores/pause.svg" alt="">
+                    </div>
+                    <div class="controles__button">
+                        <img class="controles__img" id="forward" src="assets/vectores/fordward.svg" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            </div>
+
+
+
+        </section>
+
+        <section class="waves">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+        </section>
+
+    </header>
+
+
+    <main>
+        <div class="flecha">
+
+            <img class="header__arrow" src="assets/vectores/arrow.svg" alt="">
+            <p class="flecha__text">Desliza</p>
+        </div>
+
+
+
+        <video autoplay loop muted playsinline id="bg-video">
+            <source src="assets/video.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+
+        <section class="name">
+
+            <img src="assets/imagenes/vectorTOP.webp" alt="" class="name__img" data-aos="flip-right">
+
+        </section>
+
+        <section class="temporizador contenedor block glow" id="temporizador" data-aos="fade-up">
+            <h3 class="title title--tempo">Falta muy poquito</h3>
+            <div class="timer">
+                <div class="timer-item">
+                    <p class="timer-value" id="days">0</p>
+                    <p class="timer-label">Días</p>
+                </div>
+                <div class="timer-item">
+                    <p class="timer-value" id="hours">0</p>
+                    <p class="timer-label">Horas</p>
+                </div>
+                <div class="timer-item">
+                    <p class="timer-value" id="minutes">0</p>
+                    <p class="timer-label">Minutos</p>
+                </div>
+                <div class="timer-item">
+                    <p class="timer-value" id="seconds">0</p>
+                    <p class="timer-label">Segundos</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+
+
+        <section class="frase contenedor" data-aos="fade-up">
+            <div class="block glow">
+                <p class="frase__paragraph frase__paragraph--active">
+                    "Los momentos más felices de la vida se vuelven más maravillosos cuando tenemos la suerte de
+                    compartirlos con los familiares y amigos más queridos.
+                    <br> Vos estás entre ellos por eso te invito a festejar conmigo."
+                </p>
+            </div>
+        </section>
+
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+
+
+        <section class="donde" id="donde">
+
+            <div class="donde__container block glow">
+
+                <article class="partedos contenedor" data-aos="fade-up" style="display: none;">
+                    <h3 class="title title--active">Misa</h3>
+                    <p class="parrafo parrafo--donde"></p>
+                    <img src="assets/imagenes/iglesia.webp" alt="" class="donde__img">
+                    <a class="boton__cta" href="">Ver ubicación</a>
+                </article>
+
+                <article class="parteuno contenedor" data-aos="fade-up">
+                    <h3 class="title title--active">Fiesta</h3>
+                    <p class="parrafo parrafo--donde">
+                        Te espero el día 5 de Diciembre del 2026 a las 00:30hs en el Salón La Rural del Parque,
+                        Av. Carlos Thays 700, San Miguel de Tucumán
+                    </p>
+                    <img src="assets/imagenes/salon.webp" alt="" class="donde__img">
+                    <a class="boton__cta" href="https://maps.app.goo.gl/xgWnnf7PUWMJPRQEA">Ver ubicación</a>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+
+
+        <section class="swiper mySwiper" id="fotos" data-aos="fade-up">
+            <h3 class="title title--fotos" data-aos="fade-up">Mis Fotos</h3>
+            <h5 class="parrafo parrafo--fotos" data-aos="fade-right">Desliza <br> (ó toca para ampliar)</h5>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/uno.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/uno.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/dos.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/dos.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/tres.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/tres.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/cuatro.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/cuatro.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/cinco.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/cinco.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/seis.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/seis.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/siete.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/siete.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/ocho.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/ocho.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/nueve.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/nueve.webp" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="assets/imagenes/fotos/diez.webp" class="fancybox" data-fancybox="gallery">
+                        <img class="swiper__img" src="assets/imagenes/fotos/diez.webp" alt="">
+                    </a>
+                </div>
+                <!-- Agrega más swiper-slide según sea necesario -->
+            </div>
+        </section>
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+
+
+        <section class="itinerarios">
+            <h3 class="itinerario__aviso">Sábado 5 de Diciembre del 2026</h3>
+            <div class="itinerario">
+
+
+                <div class="line">
+                    <div class="progress-container">
+                        <div class="progress"></div>
+                    </div>
+
+
+                    <article class="itinerario__item item1">
+                        <img class="itinerario__icon icon1" src="assets/imagenes/iconos/iconoCIVIL.webp" alt="">
+                        <div class="text left">
+                            <h6 class="itinerario__name">Ingreso de Invitados</h6>
+                            <h6 class="itinerario__name itinerario__name2">21:30hs</h6>
+                        </div>
+                    </article>
+
+                    <article class="itinerario__item item2">
+                        <img class="itinerario__icon icon2" src="assets/imagenes/iconos/icono18.webp" alt="">
+                        <div class="text right">
+                            <h6 class="itinerario__name">Mi Ingreso</h6>
+                            <h6 class="itinerario__name itinerario__name2">22:00hs</h6>
+                        </div>
+                    </article>
+
+                    <article class="itinerario__item item3">
+                        <img class="itinerario__icon icon3" src="assets/imagenes/iconos/iconoCENA.webp" alt="">
+                        <div class="text left">
+                            <h6 class="itinerario__name">Cena</h6>
+                            <h6 class="itinerario__name itinerario__name2">00:30hs</h6>
+                        </div>
+                    </article>
+
+                    <article class="itinerario__item item4">
+                        <img class="itinerario__icon icon4" src="assets/imagenes/iconos/iconoINICIOfiesta.webp" alt="">
+                        <div class="text right">
+                            <h6 class="itinerario__name">Inicio del Baile</h6>
+                            <h6 class="itinerario__name itinerario__name2">00:00hs</h6>
+                        </div>
+                    </article>
+
+                    <article class="itinerario__item item5">
+                        <img class="itinerario__icon icon5" src="assets/imagenes/iconos/iconoFIN.webp" alt="">
+                        <div class="text left">
+                            <h6 class="itinerario__name">Fin de la Fiesta</h6>
+                            <h6 class="itinerario__name itinerario__name2">05:00hs</h6>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+
+
+        <section class="dresscode contenedor block glow" id="dresscode">
+
+            <h4 class="title title--active">Dresscode</h4>
+            <h4 class="subtitle subtitle--active">Elegante</h4>
+            <p class="dresscode__note" style="display: none;">Por favor no asistir con vestimenta en tonos Azules</p>
+            <img class="dresscode__img" src="assets/vectores/dresscodeVECTOR.svg" alt="">
+
+            <button class="boton__cta" id="showImage" data-aos="fade-up">Ver Ejemplo</button>
+
+            <div id="lightbox" class="lightbox">
+                <span id="closeButton" class="close-button">cerrar</span>
+                <img src="assets/imagenes/drescode.webp" alt="Imagen" />
+            </div>
+        </section>
+
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+
+
+        <section class="regalos contenedor block glow" data-aos="fade-up">
+
+            <h4 class="regalos__title">Regalos</h4>
+
+            <img class="regalos__icon" src="assets/vectores/regalos.svg" alt="">
+
+            <p class="parrafo parrafo--regalos">
+                "Quiero que sepas que tu presencia es lo más importante en mi fiesta y si deseas hacerme un
+                presente, podés hacerlo por transferencia a mi cuenta...
+                y recuerda: <br> ¡Tu cariño es el mejor regalo que puedo recibir!"
+            </p>
+
+            <button id="mostrarBoton" class="boton__cta">Ver datos bancarios</button>
+            <div id="textoDesplegable" class="escondido regalos__data">
+                <div class="lineRegalos"></div>
+                <h6 class="regalo__date">Alias:</h6>
+                <p class="name__alias" id="alias">nicolz0</p>
+                <button class="alias__button" onclick="copyText()">
+                    <img class="copiar__icon" src="assets/vectores/copiar.svg" alt="">
+                    Copiar Alias</button>
+                <div class="copy-message" id="copyMessage">¡Copiado!</div>
+
+                <div class="lineRegalos"></div>
+                <h6 class="regalo__date">CBU:</h6>
+                <p class="name__cbu" id="cbuAlias">4530000800014205038865</p>
+                <button class="cbu__button" onclick="copyCbuText()">
+                    <img class="copiar__icon" src="assets/vectores/copiar.svg" alt="">
+                    Copiar CBU</button>
+                <div class="copy-message" id="copyCbuMessage">¡Copiado!</div>
+
+                <!-- <div class="lineRegalos"></div>
+                <h6 class="regalo__date">Titular:</h6>
+                <p class="name__cbu">Ignacio Nicolas monteros</p> -->
+            </div>
+
+
+        </section>
+
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+
+
+        <section class="agradecimiento block glow contenedor" data-aos="fade-up">
+
+            <div class="agradecimiento__contenedor">
+                <p class="parrafo parrafo--agradecimiento">
+                    "Deseo expresar mi profundo agradecimiento a todos mis familiares y amigos que me acompañan en esta
+                    etapa, y quiero destacar el valioso
+                    sacrificio realizado especialmente por mis padres, cuyo apoyo fué fundamental para hacer realidad
+                    este momento tan significativo en mi vida"
+                </p>
+
+                <!-- ---- padres ----- -->
+                <div class="agradecimiento__container">
+                    <h4 class="agradecimiento__title">Mis Padres</h4>
+                    <div class="agradecimiento__fotos" data-aos="fade-right">
+
+                        <div class="agradecimiento__picture">
+
+                            <h5 class="agradecimiento__name">Rodrigo</h5>
+                        </div>
+
+                        <div class="agradecimiento__picture">
+                            <h5 class="agradecimiento__name">Yanina</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+        <section class="playlist contenedor block glow" id="playlist" data-aos="fade-up">
+            <div class="playlist__container">
+                <h4 class="title title--playlist">No existe fiesta sin buena música</h4>
+                <img class="playlist__img" src="assets/vectores/dj.svg" alt="">
+                <h4 class="subtitle subtitle--playlist">¿Qué música crees que no debería faltar? <br> Ayúdame a
+                    elegir...
+                </h4>
+            </div>
+
+            <div class="playlist__mensaje" id="formContainer">
+                <label class="playlist__label" for="userName">Nombre y Apellido:</label>
+                <input class="playlist__input" type="text" id="userName" placeholder="Tu nombre y apellido">
+
+                <label class="playlist__label playlist__label2" for="whatsappMessage">Recomendación:</label>
+                <input class="playlist__input" type="text" id="whatsappMessage"
+                    placeholder="Escribe tu tema recomendado aquí">
+
+                <button class="boton__cta boton__cta2" id="botonplay1">Enviar Recomendación</button>
+                <button class="boton__cta boton__cta5" id="botonplay2">Enviar a 2</button>
+            </div>
+        </section>
+
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+        <section class="album contenedor block glow" data-aos="flip-left">
+
+            <div class="album__container" id="albumDigital">
+                <h3 class="title title--album">Etiquétame</h3>
+                <img class="album__img" src="assets/imagenes/album.webp" id="album" alt="">
+                <h3 class="parrafo parrafo--album">
+                    <!-- Quiero inmortalizar este maravilloso momento, guardando fotos y para ello tengo mi álbum
+                    compartido, ayúdame subiendo tus mejores capturas! <br> <br>
+                    <a class="boton__cta boton__cta4" style="display: none;" href="https://photos.app.goo.gl/5oNCQZvvJL27ihif9">Compartir
+                        fotos</a> -->
+                    Compartí tus fotos y videos de la fiesta en Instagram y etiquétame
+                </h3>
+
+                <a class=" boton__cta album__insta"
+                    href="https://www.instagram.com/gnicott?utm_source=ig_web_button_share_sheet&cnvx=ZDNlZDc0MzIxNw=="
+                    target="_blank" rel="noopener">
+                    <img class="album__icon" src="assets/vectores/insta.svg" alt="">@gnicott</a>
+
+                <!-- ----- hastag ------- -->
+
+                <!-- <h4 class="parrafo parrafo__hashtag">#AquiHashtag</h4> -->
+            </div>
+
+        </section>
+
+
+        <!--  
+        <section class="invitados block glow contenedor" id="invitados" data-aos="fade-up">
+
+            <div class="invitados__contenedor">
+                <div id="busqueda">
+                    <h2 class="title">Buscador de invitados</h2>
+                    <label class="busqueda__name" for="nombreBusqueda">Ingresa tu nombre y apellido <br>ó familia + apellido </label>
+                    <input class="busqueda__input" type="text" id="nombreBusqueda" placeholder="Ingrese su nombre">
+                    <p class="aclaracion">No dejar espacios al final del nombre</p>
+                    <button class="boton__cta" onclick="buscarMesa()">Buscar invitado</button>
+                </div>
+
+                <div id="resultado">
+
+                </div>
+            </div>
+        </section>   -->
+
+
+
+        <!-- separador: -->
+        <img class="img__separador" src="assets/imagenes/SEPARADOR copia.webp" alt="" data-aos="flip-right">
+        <!-- separador: -->
+
+
+        <!-- ============================================================
+                                 SECCIÓN 1 · GOOGLE SHEETS - CON ALIMENTICIO
+                                 ============================================================ -->
+        <section class="guest contenedor" id="guest">
+            <button type="button" class="guest__admin" id="guest_admin_open" aria-label="Ver lista de invitados"
+                aria-haspopup="dialog" title="Ver lista de invitados">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                    <path d="M3.2 19.5v-1.4A4.1 4.1 0 0 1 7.3 14h3.4a4.1 4.1 0 0 1 4.1 4.1v1.4" fill="none"
+                        stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                    <path d="M15.6 14.3a3.4 3.4 0 0 1 5.2 2.9v2.3" fill="none" stroke="currentColor" stroke-width="1.8"
+                        stroke-linecap="round" />
+                    <circle cx="17" cy="8.6" r="2.6" fill="none" stroke="currentColor" stroke-width="1.8" />
+                </svg>
+            </button>
+            <header class="guest__header" id="correo">
+                <div class="guest__title_row">
+                    <span class="guest__icon_wrap" aria-hidden="true">
+                        <svg class="guest__icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                            <rect x="16" y="3.5" width="9" height="6" rx="2.5" fill="currentColor" opacity="0.8" />
+                            <rect x="6" y="7" width="28" height="36" rx="5" fill="none" stroke="currentColor"
+                                stroke-width="2.2" />
+                            <circle cx="13.5" cy="15" r="2.1" fill="currentColor" />
+                            <path d="M10.4 21.4c0-1.8 1.4-3.1 3.1-3.1s3.1 1.3 3.1 3.1Z" fill="currentColor" />
+                            <path class="guest__icon_row" d="M20 15.5h8" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                            <circle cx="13.5" cy="29" r="2.1" fill="currentColor" />
+                            <path d="M10.4 35.4c0-1.8 1.4-3.1 3.1-3.1s3.1 1.3 3.1 3.1Z" fill="currentColor" />
+                            <path class="guest__icon_row guest__icon_row_delay" d="M20 29.5h8" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="37" cy="36" r="7.5" fill="var(--west_color_accent)"
+                                stroke="var(--west_color_bg)" stroke-width="2" />
+                            <path class="guest__icon_check" d="M33.6 36.1l2.4 2.4 4.6-5" fill="none" stroke="#ffffff"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <h2 class="guest__title">Confirmación de asistencia</h2>
+                </div>
+                <p class="guest__description">Recuerda que tienes hasta el 30 de Noviembre para confirmar tu asistencia.
+                </p>
+            </header>
+
+            <form class="guest__form" id="guest_form" novalidate>
+                <div class="guest__field">
+                    <label class="guest__label guest__label_center" for="guest_personas">¿Para cuántas personas
+                        confirmas
+                        esta
+                        invitación?</label>
+                    <div class="guest__select_wrapper">
+                        <select class="guest__select" id="guest_personas" name="guest_personas" required>
+                            <option value="" data-guest-placeholder>Cantidad de invitados</option>
+                        </select>
+                        <svg class="guest__select_chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="guest__guest_list" id="guest_guest_list" aria-live="polite"></div>
+
+                <div class="guest__actions">
+                    <button type="submit" class="guest__submit" id="guest_submit">Confirmar asistencia</button>
+                </div>
+
+                <div class="guest__errors" id="guest_errors" role="alert" aria-live="assertive"></div>
+            </form>
+
+            <div class="guest__success" id="guest_success" role="status" aria-live="polite" hidden>
+                <div class="guest__success_icon_wrap">
+                    <svg class="guest__success_icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2" />
+                        <path d="M8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h3 class="guest__success_title">¡Has confirmado exitosamente!</h3>
+                <p class="guest__success_text">Gracias por responder a la invitación. Hemos registrado tu confirmación.
+                </p>
+            </div>
+
+            <div class="guest__gate" id="guest_gate" aria-hidden="true" hidden>
+                <div class="guest__gate_overlay" data-gate-close></div>
+                <div class="guest__gate_dialog" role="dialog" aria-modal="true" aria-labelledby="guest_gate_title"
+                    aria-describedby="guest_gate_desc">
+                    <button type="button" class="guest__gate_close" data-gate-close aria-label="Cerrar">&times;</button>
+
+                    <div class="guest__gate_icon_wrap" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" focusable="false">
+                            <rect x="4.5" y="10" width="15" height="10.5" rx="2.5" fill="none" stroke="currentColor"
+                                stroke-width="1.8" />
+                            <path d="M8 10V7.5a4 4 0 0 1 8 0V10" fill="none" stroke="currentColor" stroke-width="1.8"
+                                stroke-linecap="round" />
+                            <circle cx="12" cy="15" r="1.6" fill="currentColor" />
+                        </svg>
+                    </div>
+
+                    <h3 class="guest__gate_title" id="guest_gate_title">Acceso a la lista</h3>
+                    <p class="guest__gate_desc" id="guest_gate_desc">Ingresa la contraseña para ver la lista de
+                        invitados.</p>
+
+                    <form class="guest__gate_form" id="guest_gate_form" novalidate>
+                        <div class="guest__gate_field">
+                            <label class="guest__gate_label" for="guest_gate_input">Contraseña</label>
+                            <div class="guest__gate_input_wrap">
+                                <input class="guest__gate_input" id="guest_gate_input" name="guest_gate_input"
+                                    type="password" autocomplete="current-password" placeholder="Escribe la contraseña">
+                                <button type="button" class="guest__gate_toggle" id="guest_gate_toggle"
+                                    aria-label="Mostrar contraseña" aria-pressed="false" tabindex="-1">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"
+                                            fill="none" stroke="currentColor" stroke-width="1.7" />
+                                        <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor"
+                                            stroke-width="1.7" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <span class="guest__gate_error" id="guest_gate_error" role="alert"></span>
+                        </div>
+
+                        <div class="guest__gate_actions">
+                            <button type="button" class="guest__gate_cancel" data-gate-close>Cancelar</button>
+                            <button type="submit" class="guest__gate_accept">Aceptar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================================
+     SECCIÓN 2 · WEST 1 (SIN MENÚ ALIMENTICIO)
+     ============================================================ -->
+        <section style="display: none;" class="guest1" id="guest1" aria-labelledby="guest1_title">
+            <header class="guest1__header">
+                <div class="guest1__title_row">
+                    <span class="guest1__icon_wrap" aria-hidden="true">
+                        <svg class="guest1__icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                            <rect x="16" y="3.5" width="9" height="6" rx="2.5" fill="currentColor" opacity="0.8" />
+                            <rect x="6" y="7" width="28" height="36" rx="5" fill="none" stroke="currentColor"
+                                stroke-width="2.2" />
+                            <circle cx="13.5" cy="15" r="2.1" fill="currentColor" />
+                            <path d="M10.4 21.4c0-1.8 1.4-3.1 3.1-3.1s3.1 1.3 3.1 3.1Z" fill="currentColor" />
+                            <path class="guest1__icon_row" d="M20 15.5h8" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                            <circle cx="13.5" cy="29" r="2.1" fill="currentColor" />
+                            <path d="M10.4 35.4c0-1.8 1.4-3.1 3.1-3.1s3.1 1.3 3.1 3.1Z" fill="currentColor" />
+                            <path class="guest1__icon_row guest1__icon_row_delay" d="M20 29.5h8" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="37" cy="36" r="7.5" fill="var(--west_color_accent)"
+                                stroke="var(--west_color_bg)" stroke-width="2" />
+                            <path class="guest1__icon_check" d="M33.6 36.1l2.4 2.4 4.6-5" fill="none" stroke="#ffffff"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <h2 class="guest1__title" id="guest1_title">Confirmación de asistencia</h2>
+                </div>
+                <p class="guest1__description">Recuerda que tienes hasta el 25 de diciembre para confirmar tu
+                    asistencia.
+                </p>
+            </header>
+
+            <form class="guest1__form" id="guest1_form" novalidate>
+                <div class="guest1__field">
+                    <span class="guest1__label guest1__label_center" id="guest1_attendance_label">¿Asistirás a la
+                        celebración?</span>
+                    <div class="guest1__attendance_options" role="radiogroup" aria-labelledby="guest1_attendance_label">
+                        <label class="guest1__attendance_option" data-attendance="Sí asistiré">
+                            <input type="radio" name="guest1_attendance" value="Sí asistiré">
+                            <span>Sí asistiré</span>
+                        </label>
+                        <label class="guest1__attendance_option" data-attendance="No asistiré">
+                            <input type="radio" name="guest1_attendance" value="No asistiré">
+                            <span>No asistiré</span>
+                        </label>
+                    </div>
+                    <span class="guest1__error" id="guest1_attendance_error" role="alert"></span>
+                </div>
+
+                <div class="guest1__field">
+                    <label class="guest1__label" for="guest1_name">Escribe tu nombre</label>
+                    <input class="guest1__input" type="text" id="guest1_name" name="guest1_name"
+                        placeholder="Escribe tu nombre" autocomplete="name" maxlength="80">
+                    <span class="guest1__error" id="guest1_name_error" role="alert"></span>
+                </div>
+
+                <div class="guest1__field">
+                    <label class="guest1__label" for="guest1_message">Mensaje (opcional)</label>
+                    <textarea class="guest1__textarea" id="guest1_message" name="guest1_message"
+                        placeholder="Escribe un mensaje (opcional)"></textarea>
+                </div>
+
+                <div class="guest1__actions">
+                    <button type="submit" class="guest1__submit" id="guest1_submit_1" data-wa="1">Confirmar asistencia
+                        1</button>
+                    <button type="submit" class="guest1__submit" id="guest1_submit_2" data-wa="2">Confirmar asistencia
+                        2</button>
+                    <button type="submit" class="guest1__submit" id="guest1_submit_3" data-wa="3">Confirmar asistencia
+                        3</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- ============================================================
+     SECCIÓN 3 · CONFIRMACIÓN CON MENÚ ALIMENTICIO
+     ============================================================ -->
+        <section style="display: none;" class="guest2" id="guest2" aria-labelledby="guest2_title">
+            <header class="guest2__header">
+                <div class="guest2__title_row">
+                    <span class="guest2__icon_wrap" aria-hidden="true">
+                        <svg class="guest2__icon" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+                            <rect x="16" y="3.5" width="9" height="6" rx="2.5" fill="currentColor" opacity="0.8" />
+                            <rect x="6" y="7" width="28" height="36" rx="5" fill="none" stroke="currentColor"
+                                stroke-width="2.2" />
+                            <circle cx="13.5" cy="15" r="2.1" fill="currentColor" />
+                            <path d="M10.4 21.4c0-1.8 1.4-3.1 3.1-3.1s3.1 1.3 3.1 3.1Z" fill="currentColor" />
+                            <path class="guest2__icon_row" d="M20 15.5h8" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" />
+                            <circle cx="13.5" cy="29" r="2.1" fill="currentColor" />
+                            <path d="M10.4 35.4c0-1.8 1.4-3.1 3.1-3.1s3.1 1.3 3.1 3.1Z" fill="currentColor" />
+                            <path class="guest2__icon_row guest2__icon_row_delay" d="M20 29.5h8" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            <circle cx="37" cy="36" r="7.5" fill="var(--west_color_accent)"
+                                stroke="var(--west_color_bg)" stroke-width="2" />
+                            <path class="guest2__icon_check" d="M33.6 36.1l2.4 2.4 4.6-5" fill="none" stroke="#ffffff"
+                                stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                    <h2 class="guest2__title" id="guest2_title">Confirmación de asistencia</h2>
+                </div>
+                <p class="guest2__description">Recuerda que tienes hasta el 25 de diciembre para confirmar tu asistencia
+                    a
+                    la celebración.</p>
+            </header>
+
+            <form class="guest2__form" id="guest2_form" novalidate>
+                <div class="guest2__field">
+                    <span class="guest2__label guest2__label_center" id="guest2_attendance_label">¿Asistirás a la
+                        celebración?</span>
+                    <div class="guest2__attendance_options" role="radiogroup" aria-labelledby="guest2_attendance_label">
+                        <label class="guest2__attendance_option" data-attendance="Sí Asistiré">
+                            <input type="radio" name="guest2_attendance" value="Sí Asistiré">
+                            <span>Sí Asistiré</span>
+                        </label>
+                        <label class="guest2__attendance_option" data-attendance="No asistiré">
+                            <input type="radio" name="guest2_attendance" value="No asistiré">
+                            <span>No asistiré</span>
+                        </label>
+                    </div>
+                    <span class="guest2__error" id="guest2_attendance_error" role="alert"></span>
+                </div>
+
+                <div class="guest2__field">
+                    <label class="guest2__label" for="guest2_name">Escribe tu nombre</label>
+                    <input class="guest2__input" type="text" id="guest2_name" name="guest2_name"
+                        placeholder="Escribe tu nombre" autocomplete="name" maxlength="80">
+                    <span class="guest2__error" id="guest2_name_error" role="alert"></span>
+                </div>
+
+                <div class="guest2__field">
+                    <span class="guest2__restrictions_label" id="guest2_restrictions_label">Restricciones
+                        alimenticias</span>
+                    <span class="guest2__restrictions_hint">Selecciona una opción.</span>
+                    <div class="guest2__restrictions_grid" role="radiogroup"
+                        aria-labelledby="guest2_restrictions_label">
+                        <label class="guest2__restriction guest2__restriction_selected" data-restriction="Ninguna">
+                            <input type="radio" name="guest2_restriction" value="Ninguna" checked>
+                            <span>Ninguna</span>
+                        </label>
+                        <label class="guest2__restriction" data-restriction="Celíaco">
+                            <input type="radio" name="guest2_restriction" value="Celíaco">
+                            <span>Celíaco</span>
+                        </label>
+                        <label class="guest2__restriction" data-restriction="Hipertenso">
+                            <input type="radio" name="guest2_restriction" value="Hipertenso">
+                            <span>Hipertenso</span>
+                        </label>
+                        <label class="guest2__restriction" data-restriction="Diabético">
+                            <input type="radio" name="guest2_restriction" value="Diabético">
+                            <span>Diabético</span>
+                        </label>
+                        <label class="guest2__restriction" data-restriction="Vegetariano">
+                            <input type="radio" name="guest2_restriction" value="Vegetariano">
+                            <span>Vegetariano</span>
+                        </label>
+                        <label class="guest2__restriction" data-restriction="Vegano">
+                            <input type="radio" name="guest2_restriction" value="Vegano">
+                            <span>Vegano</span>
+                        </label>
+                        <label class="guest2__restriction" data-restriction="Intolerante a la lactosa">
+                            <input type="radio" name="guest2_restriction" value="Intolerante a la lactosa">
+                            <span>Intolerante a la lactosa</span>
+                        </label>
+                        <label class="guest2__restriction" data-restriction="Kosher">
+                            <input type="radio" name="guest2_restriction" value="Kosher">
+                            <span>Kosher</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="guest2__field">
+                    <label class="guest2__label" for="guest2_message">Mensaje (opcional)</label>
+                    <textarea class="guest2__textarea" id="guest2_message" name="guest2_message"
+                        placeholder="Escribe un mensaje (opcional)"></textarea>
+                </div>
+
+                <div class="guest2__actions">
+                    <button type="submit" class="guest2__submit" id="guest2_submit_1" data-wa="1">Confirmar asistencia
+                        1</button>
+                    <button type="submit" class="guest2__submit" id="guest2_submit_2" data-wa="2">Confirmar asistencia
+                        2</button>
+                    <button type="submit" class="guest2__submit" id="guest2_submit_3" data-wa="3">Confirmar asistencia
+                        3</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- <seccion class="savedate">
+        <a href="assets/imagenes/album.webp" download="archivo.zip" class="boton-descarga" onclick="descargarArchivo()">Descargar Archivo</a>
+    </seccion> -->
+
+
+
+    </main>
+
+    <section class="footer">
+        <div class="ondas">
+            <div class="onda" id="onda1"></div>
+            <div class="onda" id="onda2"></div>
+            <div class="onda" id="onda3"></div>
+            <div class="onda" id="onda4"></div>
+        </div>
+        <h3 class="footer__frase">"18 años mil sueños para cumplir y una noche para soñar… La vida se celebra
+            <br> y quiero que seas parte de este momento tan especial"
+        </h3>
+    </section>
+
+    <footer class="footer__final1">
+        <div class="footer__inner1">
+            <div class="footer__brand1">
+                <p class="footer__text1">
+                    Página creada por <strong>Luno Digitales</strong>
+                    para los 18 años de <strong>NICOLÁS</strong>.<br>
+                    Todos los derechos reservados. <br>Visítanos en:
+                </p>
+
+            </div>
+
+
+            <a class="footer__site1" href="https://www.luno.net.ar" target="_blank" rel="noopener">www.luno.net.ar</a>
+            <div class="footer__social3">
+                <p class="footer__follow1">Síguenos en nuestras redes</p>
+                <a class="icon-link1"
+                    href="https://www.instagram.com/lunodigitales?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    aria-label="Instagram de Luno Digitales">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"
+                            fill="none" />
+                        <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.5" fill="none" />
+                        <circle cx="18.2" cy="5.8" r="0.7" fill="currentColor" />
+                    </svg>
+                </a>
+                <a class="icon-link1" href="https://www.facebook.com/profile.php?id=61581720891655" target="_blank"
+                    rel="noopener" aria-label="Facebook de Luno Digitales">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <style>
+        /* ///////////////// footer /////////////////////// */
+
+
+        .footer__final1 {
+            background: linear-gradient(180deg, #1b1b1b 0%, #123e9b 100%);
+            color: #ffffff;
+            padding: 1.5em 0;
+
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            font-size: 14px;
+            width: clamp(100px, 100%, 1800px);
+            text-align: center;
+            margin: 0 auto 0;
+        }
+
+        .footer__inner1 {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+            text-align: center;
+            padding: 0 1em;
+        }
+
+        .footer__text1 {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .footer__text1 strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .footer__site1 {
+            display: inline-block;
+            margin-top: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .footer__site1:hover {
+            text-decoration: underline;
+        }
+
+        .footer__social3 {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .footer__follow1 {
+            margin: 0;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: 500;
+        }
+
+        .footer__final1 .icon-link1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .footer__final1 .icon-link1 svg {
+            width: 28px !important;
+            height: 28px !important;
+            display: block;
+            margin: 0;
+        }
+
+        .footer__final1 .icon-link1:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+    <script src="javascript/guest.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="javascript/script.js?v21"></script>
+</body>
+
+</html>
